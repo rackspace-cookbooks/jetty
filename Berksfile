@@ -2,6 +2,6 @@ site :opscode
 
 metadata
 
-cookbook "apt"
+cookbook "rackspace_apt"
 cookbook "minitest-handler", "~> 0.2.1"
-cookbook "hipsnip-jetty_test", :path => "test/cookbooks/hipsnip-jetty_test"
+cookbook "rackspace_jetty_test", :path => "test/cookbooks/rackspace_jetty_test"

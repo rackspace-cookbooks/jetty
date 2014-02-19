@@ -1,10 +1,11 @@
-name             "hipsnip-jetty"
-maintainer       "HipSnip Limited"
-maintainer_email "adam@hipsnip.com/remy@hipsnip.com"
-license          "Apache 2.0"
-description      "Installs/Configures Jetty"
+name             'rackspace-jetty'
+maintainer       'Rackspace US, Inc.'
+maintainer_email 'rackspace-cookbooks@rackspace.com'
+license          'Apache 2.0'
+description      'Installs/Configures Jetty'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.9.0"
+version          '1.0.0'
+
 supports 'ubuntu', ">= 12.04"
 
-depends "java", ">= 1.10.0"
+depends "rackspace_java", ">= 1.10.0"

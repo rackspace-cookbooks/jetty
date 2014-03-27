@@ -1,8 +1,9 @@
 #
-# Cookbook Name:: hipsnip-jetty
+# Cookbook Name:: rackspace_jetty
 # Recipe:: default
 #
 # Copyright 2012-2013, HipSnip Limited
+# Copyright 2014, Rackspace US, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the 'License');
 # you may not use this file except in compliance with the License.
@@ -16,36 +17,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-default['jetty']['user'] = 'jetty'
-default['jetty']['group'] = 'jetty'
-default['jetty']['home'] = '/usr/share/jetty'
-default['jetty']['port'] = 8080
+
+default['rackspace_jetty']['user'] = 'jetty'
+default['rackspace_jetty']['group'] = 'jetty'
+default['rackspace_jetty']['home'] = '/usr/share/jetty'
+default['rackspace_jetty']['port'] = 8080
 # The default arguments to pass to jetty.
-default['jetty']['args'] = []
-default['jetty']['logs'] = '/var/log/jetty'
+default['rackspace_jetty']['args'] = []
+default['rackspace_jetty']['logs'] = '/var/log/jetty'
 # Extra options to pass to the JVM
-default['jetty']['java_options'] = []
+default['rackspace_jetty']['java_options'] = []
 
 # set of paths of jetty configuration files relative to jetty home directory.
 # e.g: ['etc/jetty-webapps.xml', 'etc/jetty-http.xml']
-default['jetty']['add_confs'] = []
+default['rackspace_jetty']['add_confs'] = []
 
-default['jetty']['version'] = '8.1.10.v20130312'
-default['jetty']['link'] = 'http://eclipse.org/downloads/download.php?file=/jetty/8.1.10.v20130312/dist/jetty-distribution-8.1.10.v20130312.tar.gz&r=1'
-default['jetty']['checksum'] = 'e966f87823adc323ce67e99485fea126b84fff5affdc28aa7526e40eb2ec1a5b' # SHA256
+default['rackspace_jetty']['version'] = '8.1.14.v20131031'
+default['rackspace_jetty']['link'] = "http://download.eclipse.org/jetty/#{node['rackspace_jetty']['version']}/dist/jetty-distribution-#{node['rackspace_jetty']['version']}.tar.gz"
+default['rackspace_jetty']['checksum'] = '5a91529549ac8956feeebc68b02c0f65' # SHA256
 
-default['jetty']['directory'] = '/usr/local/src'
+default['rackspace_jetty']['directory'] = '/usr/local/src'
 
 # SEVERE ERROR (highest value) WARNING INFO CONFIG FINE FINER FINEST (lowest value)
-default['jetty']['log']['level']  = 'INFO'
-default['jetty']['log']['class'] = 'org.eclipse.jetty.util.log.StdErrLog'
+default['rackspace_jetty']['log']['level']  = 'INFO'
+default['rackspace_jetty']['log']['class'] = 'org.eclipse.jetty.util.log.StdErrLog'
 
 # if true, it will use the utility logger to log messages into syslog
-default['jetty']['syslog']['enable'] = false
+default['rackspace_jetty']['syslog']['enable'] = false
 # format expected "facility.level", pass the value to the logger utility into the option "--priority"
-default['jetty']['syslog']['priority'] = ''
+default['rackspace_jetty']['syslog']['priority'] = ''
 # pass the value to the logger utility into the option "--tag"
-default['jetty']['syslog']['tag'] = ''
+default['rackspace_jetty']['syslog']['tag'] = ''
 
-default['jetty']['start_ini']['custom'] = false
-default['jetty']['start_ini']['content'] = []
+default['rackspace_jetty']['start_ini']['custom'] = false
+default['rackspace_jetty']['start_ini']['content'] = []

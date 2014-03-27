@@ -13,55 +13,55 @@ platforms:
     network:
       - ["private_network", {ip: "11.12.14.14"}]
   run_list:
-  - recipe[apt]
+  - recipe[rackspace_apt]
 
 suites:
 - name: default
   run_list:
-    - recipe[hipsnip-jetty_test::default]
+    - recipe[rackspace_jetty_test::default]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/default_test.rb"
+      tests: "rackspace_jetty_test/default_test.rb"
 - name: jetty-9
   run_list:
-    - recipe[hipsnip-jetty_test::jetty_9]
+    - recipe[rackspace_jetty_test::jetty_9]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/jetty_9_test.rb"
+      tests: "rackspace_jetty_test/jetty_9_test.rb"
 - name: jetty-8
   run_list:
-    - recipe[hipsnip-jetty_test::jetty_8]
+    - recipe[rackspace_jetty_test::jetty_8]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/jetty_8_test.rb"
+      tests: "rackspace_jetty_test/jetty_8_test.rb"
 - name: logging-on-files
   run_list:
-    - recipe[hipsnip-jetty_test::logging_on_files]
+    - recipe[rackspace_jetty_test::logging_on_files]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/logging_on_files_test.rb"
+      tests: "rackspace_jetty_test/logging_on_files_test.rb"
 - name: use-syslog-jetty-9
   run_list:
-    - recipe[hipsnip-jetty_test::use_syslog_jetty_9]
+    - recipe[rackspace_jetty_test::use_syslog_jetty_9]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/use_syslog_jetty_9_test.rb"
+      tests: "rackspace_jetty_test/use_syslog_jetty_9_test.rb"
 - name: use-syslog-jetty-8
   run_list:
-    - recipe[hipsnip-jetty_test::use_syslog_jetty_8]
+    - recipe[rackspace_jetty_test::use_syslog_jetty_8]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/use_syslog_jetty_8_test.rb"
+      tests: "rackspace_jetty_test/use_syslog_jetty_8_test.rb"
 - name: custom-start-ini
   run_list:
-    - recipe[hipsnip-jetty_test::custom_start_ini]
+    - recipe[rackspace_jetty_test::custom_start_ini]
     - recipe[minitest-handler]
   attributes:
     minitest:
-      tests: "hipsnip-jetty_test/custom_start_ini_test.rb"
+      tests: "rackspace_jetty_test/custom_start_ini_test.rb"
